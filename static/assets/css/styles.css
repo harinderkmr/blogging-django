@@ -1,0 +1,80 @@
+.carousel img {
+    width: 100%;
+    height: 700px;
+}
+
+.blog-posts .blog-post img,
+.blog-post img {
+    height: 300px;
+}
+
+/* Add to your CSS file */
+#categories {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.category-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.category-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.category-item a {
+    text-decoration: none;
+    color: #333;
+}
+
+.category-item a h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+
+/* dynamic backgrounf */
+
+.travel-bg {
+    background: url('/static/assets/images/travel-banner.jpg') center center/cover no-repeat;
+  }
+  
+  .health-bg {
+    background: url('/static/images/health-banner.jpg') center center/cover no-repeat;
+  }
+  
+  .sports-bg {
+    background: url('/static/images/sports-banner.jpg') center center/cover no-repeat;
+  }
+  
+  .default-bg {
+    background: #333;
+  }
+  
+
+  /* hover effect */
+  .category-item {
+    background-color: #f0f0f0 ;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 10px;
+  }
+  
+  .category-item:hover {
+    background-color: #1b1b1b !important; /* Bootstrap dark */
+  }
+  
+  /* Override Bootstrap text-dark class on hover */
+  .category-item:hover a,
+  .category-item:hover h5 {
+    color: #fff !important;
+  }
+
+  
+  
+  
+  

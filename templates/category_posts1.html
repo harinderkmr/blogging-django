@@ -1,0 +1,42 @@
+<!-- category_posts.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container mt-5">
+    <h3 class="mb-4" style="font-size: 30px; font-weight: bold;">Posts in {{ category.name }} Category</h3>
+    
+    <div class="row">
+      {% for post in posts %}
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+          <div class="post-item p-4 shadow">
+            <a href="{% url 'post' post.id %}" class="text-decoration-none text-dark">
+              <h5 class="mb-3">{{ post.postname }}</h5>
+              <img src="{{ media_url }}{{ post.image }}" alt="{{ post.postname }}" class="img-fluid">
+            </a>
+            <p>{{ post.content|truncatewords:50 }}...</p>
+            <p class="small text-primary">{{ post.time }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    
+    <!-- Pagination (optional) -->
+    <div class="pagination">
+      <span class="step-links">
+        {% if posts.has_previous %}
+          <a href="?page=1">&laquo; first</a>
+          <a href="?page={{ posts.previous_page_number }}">previous</a>
+        {% endif %}
+        
+        <span class="current">
+          Page {{ posts.number }} of {{ posts.paginator.num_pages }}.
+        </span>
+        
+        {% if posts.has_next %}
+          <a href="?page={{ posts.next_page_number }}">next</a>
+          <a href="?page={{ posts.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+      </span>
+    </div>
+  </div>
+{% endblock %}

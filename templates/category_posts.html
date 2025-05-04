@@ -1,0 +1,308 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+  <!-- Dynamic background wrapper -->
+  <!-- <div class="category-header py-5 text-center text-black
+      {% if category.name == 'Travel' %}
+        travel-bg
+      {% elif category.name == 'Health' %}
+        health-bg
+      {% elif category.name == 'Sports' %}
+        sports-bg
+      {% else %}
+        default-bg
+      {% endif %}
+  "> -->
+
+  {% if category.name == 'Travel' %}
+  <div class="category-header position-relative text-white"
+       style="
+         background: url('{% static '/assets/images/travel-banner.jpg' %}') no-repeat center center;
+         background-size: cover;
+         min-height: 300px;
+         /* height: auto; */
+         width: 100%;
+       ">
+    <div class="overlay d-flex flex-column justify-content-center align-items-center text-center"
+         style="
+           position: absolute;
+           top: 0;
+           left: 0;
+           right: 0;
+           bottom: 0;
+           background-color: rgba(0, 0, 0, 0.5);  /* semi-transparent black */
+         ">
+      <h2 style="font-size: 36px;">Welcome to {{ category.name }} Blogs</h2>
+      <p style="font-size: 18px;">Explore articles and stories related to {{ category.name }}</p>
+    </div>
+  </div>
+{% elif category.name == 'Lifestyle' %}
+  <!-- Repeat similar block with different image -->
+  <div class="category-header position-relative text-white"
+  style="
+    background: url('{% static 'assets/images/lifestyle-banner.jpg' %}') no-repeat center center;
+    background-size: cover;
+    min-height: 300px;
+    width: 100%;
+  ">
+<div class="overlay d-flex flex-column justify-content-center align-items-center text-center"
+    style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);  /* semi-transparent black */
+    ">
+ <h2 style="font-size: 36px;">Welcome to {{ category.name }} Blogs</h2>
+ <p style="font-size: 18px;">Explore articles and stories related to {{ category.name }}</p>
+</div>
+</div>
+{% elif category.name == 'Sports' %}
+  <!-- Repeat similar block with different image -->
+  <div class="category-header position-relative text-white"
+  style="
+    background: url('{% static 'assets/images/sports-banner.jpg' %}') no-repeat center center;
+    background-size: cover;
+    min-height: 300px;
+    width: 100%;
+  ">
+<div class="overlay d-flex flex-column justify-content-center align-items-center text-center"
+    style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);  /* semi-transparent black */
+    ">
+ <h2 style="font-size: 36px;">Welcome to {{ category.name }} Blogs</h2>
+ <p style="font-size: 18px;">Explore articles and stories related to {{ category.name }}</p>
+</div>
+</div>
+{% elif category.name == 'Food' %}
+  <!-- Repeat similar block with different image -->
+  <div class="category-header position-relative text-white"
+  style="
+    background: url('{% static 'assets/images/Food-banner.jpg' %}') no-repeat center center;
+    background-size: cover;
+    min-height: 300px;
+    width: 100%;
+  ">
+<div class="overlay d-flex flex-column justify-content-center align-items-center text-center"
+    style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);  /* semi-transparent black */
+    ">
+ <h2 style="font-size: 36px;">Welcome to {{ category.name }} Blogs</h2>
+ <p style="font-size: 18px;">Explore articles and stories related to {{ category.name }}</p>
+</div>
+</div>
+{% elif category.name == 'Technology' %}
+  <!-- Repeat similar block with different image -->
+  <div class="category-header position-relative text-white"
+  style="
+    background: url('{% static 'assets/images/technology-banner.jpg' %}') no-repeat center center;
+    background-size: cover;
+    min-height: 300px;
+    width: 100%;
+  ">
+<div class="overlay d-flex flex-column justify-content-center align-items-center text-center"
+    style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);  /* semi-transparent black */
+    ">
+ <h2 style="font-size: 36px;">Welcome to {{ category.name }} Blogs</h2>
+ <p style="font-size: 18px;">Explore articles and stories related to {{ category.name }}</p>
+</div>
+</div>
+{% elif category.name == 'Fashion & Beauty' %}
+  <!-- Repeat similar block with different image -->
+  <div class="category-header position-relative text-white"
+  style="
+    background: url('{% static 'assets/images/fashion-banner.jpg' %}') no-repeat center center;
+    background-size: cover;
+    min-height: 300px;
+    width: 100%;
+  ">
+<div class="overlay d-flex flex-column justify-content-center align-items-center text-center"
+    style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);  /* semi-transparent black */
+    ">
+ <h2 style="font-size: 36px;">Welcome to {{ category.name }} Blogs</h2>
+ <p style="font-size: 18px;">Explore articles and stories related to {{ category.name }}</p>
+</div>
+</div>
+{% elif category.name == 'Entertainment' %}
+  <!-- Repeat similar block with different image -->
+  <div class="category-header position-relative text-white"
+  style="
+    background: url('{% static 'assets/images/entertainment-banner.jpg' %}') no-repeat center center;
+    background-size: cover;
+    min-height: 300px;
+    width: 100%;
+  ">
+<div class="overlay d-flex flex-column justify-content-center align-items-center text-center"
+    style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);  /* semi-transparent black */
+    ">
+ <h2 style="font-size: 36px;">Welcome to {{ category.name }} Blogs</h2>
+ <p style="font-size: 18px;">Explore articles and stories related to {{ category.name }}</p>
+</div>
+</div>
+{% elif category.name == 'Nature' %}
+  <!-- Repeat similar block with different image -->
+  <div class="category-header position-relative text-white"
+  style="
+    background: url('{% static 'assets/images/nature-banner.jpg' %}') no-repeat center center;
+    background-size: cover;
+    min-height: 300px;
+    width: 100%;
+  ">
+<div class="overlay d-flex flex-column justify-content-center align-items-center text-center"
+    style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);  /* semi-transparent black */
+    ">
+ <h2 style="font-size: 36px;">Welcome to {{ category.name }} Blogs</h2>
+ <p style="font-size: 18px;">Explore articles and stories related to {{ category.name }}</p>
+</div>
+</div>
+{% elif category.name == 'Education' %}
+  <!-- Repeat similar block with different image -->
+  <div class="category-header position-relative text-white"
+  style="
+    background: url('{% static 'assets/images/Education-banner.jpg' %}') no-repeat center center;
+    background-size: cover;
+    min-height: 300px;
+    width: 100%;
+  ">
+<div class="overlay d-flex flex-column justify-content-center align-items-center text-center"
+    style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);  /* semi-transparent black */
+    ">
+ <h2 style="font-size: 36px;">Welcome to {{ category.name }} Blogs</h2>
+ <p style="font-size: 18px;">Explore articles and stories related to {{ category.name }}</p>
+</div>
+</div>
+{% elif category.name == 'Artificial Intelligence' %}
+  <!-- Repeat similar block with different image -->
+  <div class="category-header position-relative text-white"
+  style="
+    background: url('{% static 'assets/images/ai-banner.jpg' %}') no-repeat center center;
+    background-size: cover;
+    min-height: 300px;
+    width: 100%;
+  ">
+<div class="overlay d-flex flex-column justify-content-center align-items-center text-center"
+    style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);  /* semi-transparent black */
+    ">
+ <h2 style="font-size: 36px;">Welcome to {{ category.name }} Blogs</h2>
+ <p style="font-size: 18px;">Explore articles and stories related to {{ category.name }}</p>
+</div>
+</div>
+{% elif category.name == 'Health' %}
+  <!-- Repeat similar block with different image -->
+  <div class="category-header position-relative text-white"
+  style="
+    background: url('{% static 'assets/images/health-banner.jpg' %}') no-repeat center center;
+    background-size: cover;
+    min-height: 300px;
+    width: 100%;
+  ">
+<div class="overlay d-flex flex-column justify-content-center align-items-center text-center"
+    style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);  /* semi-transparent black */
+    ">
+ <h2 style="font-size: 36px;">Welcome to {{ category.name }} Blogs</h2>
+ <p style="font-size: 18px;">Explore articles and stories related to {{ category.name }}</p>
+</div>
+</div>
+
+{% else %}
+  <div class="category-header py-5 text-center text-white bg-dark">
+    <h2 style="font-size: 36px;">Welcome to {{ category.name }} Blogs</h2>
+    <p style="font-size: 18px;">Explore articles and stories related to {{ category.name }}</p>
+  </div>
+{% endif %}
+
+
+  <div class="container mt-5">
+    <h3 class="mb-4" style="font-size: 30px; font-weight: bold;">Posts in {{ category.name }} Category</h3>
+    
+    <div class="row">
+      {% for post in posts %}
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+          <div class="post-item p-4 shadow">
+            <a href="{% url 'post' post.id %}" class="text-decoration-none text-dark">
+              <h5 class="mb-3">{{ post.postname }}</h5>
+              <img src="{{ media_url }}{{ post.image }}" alt="{{ post.postname }}" class="img-fluid">
+            </a>
+            <p>{{ post.content|truncatewords:50 }}...</p>
+            <p class="small text-primary">{{ post.time }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    
+    <!-- Pagination (optional) -->
+    <div class="pagination">
+      <span class="step-links">
+        {% if posts.has_previous %}
+          <a href="?page=1">&laquo; first</a>
+          <a href="?page={{ posts.previous_page_number }}">previous</a>
+        {% endif %}
+        
+        <span class="current">
+          Page {{ posts.number }} of {{ posts.paginator.num_pages }}.
+        </span>
+        
+        {% if posts.has_next %}
+          <a href="?page={{ posts.next_page_number }}">next</a>
+          <a href="?page={{ posts.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+      </span>
+    </div>
+  </div>
+{% endblock %}
